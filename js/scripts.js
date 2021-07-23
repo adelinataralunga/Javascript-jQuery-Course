@@ -183,3 +183,196 @@ do {
     countTwo++;
 } while (countTwo < 5); // This loop requires the semicolon after the condition.*/
 
+
+// *********
+// Lesson 21
+// *********
+/*
+var age = 18;
+
+if (age < 18) {
+    console.log('Underage');
+} else if (age >= 65) {
+    console.log("Senior");
+} else {
+    console.log('Adult');
+}*/
+
+// grade = 7;
+// absences = 3;
+
+// Solving the problem with &&
+/*
+if (grade >= 7 && absences <= 5) {
+    console.log("The student has been approved.");
+} else {
+    console.log("The student has failed.");
+}*/
+
+// Solving the problem with ||
+/*if (grade < 7 || absences > 5) {
+    console.log("The student has failed.");
+} else {
+    console.log("The student has been approved.");
+}*/
+
+// var name = "Arial";
+
+/*if (name) {
+
+    console.log("The name is " + name);
+
+} else {
+
+    console.log("The name has not been informed");
+
+}*/
+
+// console.log(name ? "The name is " + name : "The name has not been informed!");
+
+/*var myAge = 20;
+console.log(myAge < 18 ? 'Underage' : myAge >= 65 ? 'Senior' : 'Adult');*/
+
+// *********
+// Lesson 22
+// *********
+
+/*
+var isMember = false;
+var age = 25;
+
+if (isMember || age >= 65) {
+    console.log('Free');
+} else if (age < 18) {
+    console.log('$ 6.00');
+} else {
+    console.log('$ 12.00');
+}*/
+
+/*var employees = [
+
+    {
+        'name': 'Charles Silva',
+        'age': 45,
+        'children': ['Andrew Silva', 'Maria Silva']
+
+    },
+
+    {
+        'name': 'Elizabeth Green',
+        'age': 32,
+        'children': ['Peter Green']
+
+    },
+
+    {
+        'name': 'George Banks',
+        'age': 39,
+        'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
+
+    }
+
+];
+
+document.getElementById("children").innerHTML = "";
+
+for (var a = 0; a < employees.length; a++) {
+    var childrenList = employees[a].children;
+
+    for (var b = 0; b < childrenList.length; b++) {
+        var child = childrenList[b];
+        // console.log(child);
+        document.getElementById("children").innerHTML += "<li>" + child + "</li>";
+    }
+}*/
+
+
+// *********
+// Lesson 23
+// *********
+
+// Global scope
+var personsName = "John";
+
+/*function create_name() {
+    // Local scope
+    var personsName = 'Mary';
+    console.log(personsName);
+}
+
+create_name();*/
+
+// Still global scope because if is not a function!
+/*
+if (true) {
+    // Just replacing the same variable
+    var personsName = "Mary";
+    console.log(personsName);
+}
+console.log(personsName);
+*/
+
+// Conflict as a becomes 3 after the parent loop 0,then a will not meet the condition for parent loop 1
+// for (var a = 0; a < 3; a++) {
+// Solution: use let instead of just var for the variable to become local
+/*for (let a = 0; a < 3; a++) {
+    console.log('Parent loop: ', a);
+
+    // for (var a = 0; a < 3; a++) {
+    for (let a = 0; a < 3; a++) {
+        console.log('Child loop:' , a);
+    }
+}*/
+
+// The best approach is to use different variable names as some versions of Internet Explorer don't support
+// ES6 so it will be a problem for some users
+
+/*function create_name() {
+    // Local scope
+    name = 'I am a global variable because you forgot to use var';
+    console.log(name);
+}
+create_name();
+console.log(name);*/
+
+// *********
+// Lesson 25
+// *********
+/*window.onmousemove = function (e) {
+    if (e.pageY < 5) {
+        alert("Don't miss out our flash sale. Go to the products section for exclusive discounts.");
+    }
+}*/
+
+// *********
+// Lesson 26
+// *********
+
+/*var dateObj = new Date();
+console.log(dateObj);*/
+
+var orderDate = new Date("2021-03-26");
+var deliveryDate = new Date("2021-04-02");
+var leadTime = (deliveryDate - orderDate) / 86400000;
+
+document.getElementById("delivery_time").innerHTML = Math.floor(leadTime);
+
+// *********
+// Lesson 27
+// *********
+
+// *********
+// Lesson 28
+// *********
+
+// *********
+// Lesson 29
+// *********
+
+// *********
+// Lesson 30
+// *********
+
+// *********
+// Lesson 31
+// *********
