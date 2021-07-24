@@ -292,7 +292,7 @@ for (var a = 0; a < employees.length; a++) {
 // *********
 
 // Global scope
-var personsName = "John";
+// var personsName = "John";
 
 /*function create_name() {
     // Local scope
@@ -351,27 +351,152 @@ console.log(name);*/
 /*var dateObj = new Date();
 console.log(dateObj);*/
 
-var orderDate = new Date("2021-03-26");
+/*var orderDate = new Date("2021-03-26");
 var deliveryDate = new Date("2021-04-02");
 var leadTime = (deliveryDate - orderDate) / 86400000;
 
-document.getElementById("delivery_time").innerHTML = Math.floor(leadTime);
+document.getElementById("delivery_time").innerHTML = Math.floor(leadTime);*/
 
 // *********
 // Lesson 27
 // *********
+/*console.log("Message 1");
+window.setTimeout(function () {
+    console.log("Message 2");
+}, 3000);*/
+
+/*
+document.getElementById("show-loader").onclick = function () {
+    document.getElementById("spinner-loader").style.display = "block";
+    window.setTimeout(function () {
+        document.getElementById("spinner-loader").style.display = "none";
+    }, 2000);
+};
+*/
+
+/*var count = 0;
+
+var timeInterval = window.setInterval(function () {
+    console.log(count);
+    count++;
+    if (count >= 5) {
+        window.clearInterval(timeInterval);
+    }
+}, 1000);*/
+
+// Challenge
+/*function add_leading_zero (number) {
+    if (number < 10) {
+        return "0" + number.toString();
+    } else {
+        return number.toString();
+    }
+}
+
+var timeInterval = window.setInterval(function () {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    document.getElementById("hours").innerHTML = add_leading_zero(hours);
+    document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+    document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
+}, 1000);*/
 
 // *********
 // Lesson 28
 // *********
+/*var x = 0;
+while (x < 10) {
+    console.log(x);
+    x++;
+    if (x == 5) {
+        break;
+    }
+}*/
+
+/*var y = 0;
+while (y < 20) {
+    y++;
+    if (y % 2 != 0) {
+        continue;
+    }
+    console.log(y);
+}*/
 
 // *********
 // Lesson 29
 // *********
+/*document.getElementById("show_option").onclick = function () {
+  var selectField = document.getElementById("options");
+  var selectedOption = selectField.options.selectedIndex;
+  var selectedValue = selectField.options[selectedOption];
+
+  document.getElementById("selected_option").innerHTML = selectedValue.innerHTML;
+  // console.log(selectedValue.value);
+
+  // A better solution to get the value, only this is possible
+  /!*var seletedOption = document.getElementById("options").value;
+  console.log(seletedOption);*!/
+};
+
+document.getElementById("show_radio").onclick = function () {
+    var radio = document.getElementsByName("gender");
+
+    var radioSelected;
+    for(var i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            radioSelected = radio[i];
+            document.getElementById("selected_radio").innerHTML = radioSelected.value;
+        }
+    }
+};
+
+document.getElementById("show_check").onclick = function () {
+    var check = document.getElementsByName("interest");
+
+    document.getElementById("selected_check").innerHTML = "<ul>";
+
+    for (var i = 0; i < check.length; i++) {
+        if (check[i].checked) {
+            document.getElementById("selected_check").innerHTML +=
+                "<li>" + check[i].value + "</li>";
+        }
+    }
+    document.getElementById("selected_check").innerHTML += "</ul>";
+};*/
 
 // *********
 // Lesson 30
 // *********
+
+document.getElementById("education_level").onchange = function () {
+  // console.log("changed");
+  var selectedField = document.getElementById("education_level");
+  var selectedOption = selectedField.options.selectedIndex;
+  var selectedValue = selectedField.options[selectedOption];
+  document.getElementById("selected_level").innerHTML = selectedValue.innerHTML;
+};
+
+
+var check  = document.getElementsByName("meal");
+for (var i = 0; i < check.length; i++) {
+    check[i].onchange = function () {
+        document.getElementById("selected_check").innerHTML = "<ul>";
+
+        for (var j = 0; j < check.length; j++) {
+            if (check[j].checked) {
+                document.getElementById("selected_check").innerHTML += "<li>" + check[j].value + "</li>";
+
+            }
+        }
+
+        document.getElementById("selected_check").innerHTML += "</ul>";
+
+    };
+}
+
 
 // *********
 // Lesson 31
