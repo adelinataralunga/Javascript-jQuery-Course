@@ -471,7 +471,7 @@ document.getElementById("show_check").onclick = function () {
 // Lesson 30
 // *********
 
-document.getElementById("education_level").onchange = function () {
+/* document.getElementById("education_level").onchange = function () {
   // console.log("changed");
   var selectedField = document.getElementById("education_level");
   var selectedOption = selectedField.options.selectedIndex;
@@ -495,9 +495,122 @@ for (var i = 0; i < check.length; i++) {
         document.getElementById("selected_check").innerHTML += "</ul>";
 
     };
-}
+} */
 
 
 // *********
-// Lesson 31
+// Lesson 33
+// *********
+
+/* $("#hide").click(function() {
+    // $(".example").css("display", "none");
+    $(".example").hide();
+}); */
+
+// *********
+// Lesson 34
+// *********
+/* var content = $("#sample_text").html();
+console.log(content);
+$("#sample_text").html("New content");
+
+var text_content = $("#sample-text-only").text();
+console.log(text_content); */
+
+// $("#link-element").attr("href", "https://techcrunch.com/");
+/* $("#change_image").click(function(){
+    $("#imagem_js").attr("src", "https://www.undeprecated.com/assets/img/posts/javascript.png");
+    $("#change_image").hide();
+}); */
+
+// $("#empty_paragraph").empty();
+// $("#empty_paragraph").hide();
+// $("#empty_paragraph").show();
+// $("#empty_paragraph").remove();
+
+// *********
+// Lesson 35
+// *********
+/* var contentInput = $("#name_field").val();
+console.log(contentInput);
+$("#name_field").val("Peter Green"); */
+
+// GETTING THE VALUE OF A SELECTED OPTION (FROM SELECT BOX)
+/* var selectedValue = $("#options").val();
+console.log("The option: ", selectedValue); */
+
+// GETTING THE TEXT (LIKE INNERHTML) OF A SELECTED OPTION (FROM SELECT BOX)
+/* var selectedText = $("#options option:selected").text();
+console.log("The selected value: ", selectedText); */
+
+// On change event showing the value in the console
+/* $("#options").change(function () {
+    var newValue = $("#options option:selected").text();
+    console.log(newValue);
+}); */
+
+/* $("input[name = 'gender']").change(function() {
+    console.log($("input[name = 'gender']:checked").val());
+}); */
+
+// Using the parent methd to get the span element that we used to wrap the text with the input field
+// So we only get the text, no HTML
+/* $("input[name='gender']").change(function() {
+    var textRadio  = $("input[name = 'gender']:checked").parent().text();
+    console.log(textRadio);
+}); */
+
+// Let's also get the updated value
+/* $("input[name='gender']").change(function() {
+    var newRadioValue = $("input[name='gender']:checked").parent("span").text();
+    console.log(newRadioValue);
+}); */
+
+$("input[name='interest']").change(function() {
+    var selectedCheckboxes = $("input[name='interest']:checked");
+    var texts = [];
+
+    $.each(selectedCheckboxes, function(index, value) {
+        // console.log($(value).parent().text());
+        texts.push($(value).parent("span").text());
+    });
+    console.log(texts);
+});
+
+
+// *********
+// Lesson 36
+// *********
+// *********
+// Lesson 37
+// *********
+// *********
+// Lesson 38
+// *********
+// *********
+// Lesson 39
+// *********
+// *********
+// Lesson 40
+// *********
+// *********
+// Lesson 41
+// *********
+// *********
+// Lesson 42
+// *********
+// *********
+// Lesson 43
+// *********
+// *********
+// Lesson 44
+// *********
+// *********
+// Lesson 45
+// *********
+// *********
+// Lesson 46
+// *********
+// *********
+// Lesson 47
 // *********
