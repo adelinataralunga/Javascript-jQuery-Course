@@ -566,7 +566,7 @@ console.log("The selected value: ", selectedText); */
     console.log(newRadioValue);
 }); */
 
-$("input[name='interest']").change(function() {
+/* $("input[name='interest']").change(function() {
     var selectedCheckboxes = $("input[name='interest']:checked");
     var texts = [];
 
@@ -575,21 +575,102 @@ $("input[name='interest']").change(function() {
         texts.push($(value).parent("span").text());
     });
     console.log(texts);
-});
+}); */
 
 
 // *********
 // Lesson 36
 // *********
+/* $("#add_class").click(function() {
+    $("#example-paragraph").addClass("styling");
+});
+
+$("#remove_class").click(function() {
+    $("#example-paragraph").removeClass("styling");
+});
+
+$("#toggle_class").click(function() {
+    $("#example-paragraph").toggleClass("styling");
+}); */
+
 // *********
 // Lesson 37
 // *********
+/* $(document).ready(function() {
+    // Usually all th code will go inside this function
+}); */
+
+// Ready event for the document object
+// This is the same as setting the ready event to the body of the page
+/* $(function() {
+    // Add all the code of your page inside here
+}); */
+
+/* $("element").on("click", function() {
+
+}); */
+
+// Passing on an object
+/* $("element").on({
+    // Key - value
+    click: function() {
+        // Code to be executed
+    },
+    mouseenter: function() {
+
+    }
+}); */
+
+// Solution to the challenge
+
+//$("#fullName").keyup(function() {
+    /* if ($("#fullName").val() == "") {
+        $("#submit").hide();
+    } else {
+        $("#submit").show();
+    } */
+
+    // Ternary if
+    //$("#fullName").val() == "" ? $("#submit").hide() : $("#submit").show();
+//});
+
 // *********
 // Lesson 38
 // *********
+/* $( "#hide-button" ).click(function() {
+    // With callback funtion that will be executed after the previous function ends
+    // because JavaScript can also be asynchronous
+    // In programming, synchronous operations block instructions until the task is completed, 
+    while asynchronous operations can execute without blocking other operations. Asynchronous 
+    operations are generally completed by firing an event or by calling a provided callback function.
+    $(this).hide(2000, function() {
+        $("#hidden-text").show();
+    });
+}); */
+
+
+/* $( "#hide-button" ).click(function() {
+    $(this).hide(2000);
+    $("#hidden-text").show();
+}); */
+
+/* $("#toggle-tab").click(function() {
+    $("#tab-content").slideToggle("slow");
+    $("#toggle-tab").toggleClass("flip");
+    
+}); */
+
 // *********
 // Lesson 39
 // *********
+/* $("#animate").click(function(){
+    $("#square").animate({
+        width: '+=50px',
+        height: '+=50px',
+        marginLeft: '+=50px'
+    });
+});  */
+
 // *********
 // Lesson 40
 // *********
