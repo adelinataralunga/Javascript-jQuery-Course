@@ -674,18 +674,149 @@ $("#toggle_class").click(function() {
 // *********
 // Lesson 40
 // *********
+/* function get_user(callback){
+    var u = {
+        'name': 'John'
+    };
+
+    window.setTimeout(function() {
+        callback(u);
+    }, 1000);
+}
+        
+function greet_user(user) {
+    console.log('Hi ' + user.name + ', how are you?');
+}
+
+function goodbye_user(user) {
+    console.log('Goodbye, ' + user.name + '!');
+}
+        
+get_user(greet_user);
+get_user(goodbye_user);
+get_user(function(user) {
+    console.log("Hey " + user.name + ", this is another way of using a callback function.");
+}); */
+
 // *********
 // Lesson 41
 // *********
+/* function get_user(){ 
+    var u = {
+        'name': ''
+    };
+    return u;
+}
+        
+function greet_user(user) {
+    console.log('Hi ' + user.name + ', how are you?');
+}
+        
+try {
+    var user = get_user();
+
+    // if (user.name == '') { the same as below
+    if (!user.name) {
+        throw 'Name is empty';
+    }
+
+    greet_user(user);
+} catch (err) {
+    console.log(err);
+    console.log("Hi guest user, how are you?");
+} finally {
+    console.log('New line of code inside the finally block.');
+} */
+
 // *********
 // Lesson 42
 // *********
+/* var bestSellersSlider = {};
+
+// Creating the properties
+bestSellersSlider.products = ['product 1', 'product 2', 'product 3'];
+bestSellersSlider.interval = 3000; */
+
+/* var bestSellersSlider = {
+    products: ['product 1', 'product 2', 'product 3'],
+    interval: 3000,
+
+    get_products: function() {
+        console.log(this.products);
+    }
+}; */
+
 // *********
 // Lesson 43
 // *********
+
+// Object
+/* var employee = {
+    'name': "Maria Silva",
+    'birth_date': '1988-10-01'
+};
+
+// String: typeof employee_JSON
+// So JSON is a String representation of an object
+var employee_JSON = JSON.stringify(employee);
+console.log(employee_JSON);
+
+var employee_obj = JSON.parse(employee_JSON);
+console.log(employee_obj); */
+
 // *********
 // Lesson 44
 // *********
+// The value always needs to be a String for localStorage
+//  window.localStorage.setItem("name", "Selena");
+
+// Using JSON to send an Object to the local storage
+/* var person = {name: "Ivan", age: "34"};
+localStorage.setItem('person', JSON.stringify(person));
+
+// Getting it back
+console.log(JSON.parse(localStorage.person).name); */
+
+// remove from the console
+// localStorage.removeItem("name");
+
+// sessionStorage.setItem("preference", "beach");
+
+// Practical example
+
+/* $("#submit-name").click(function() {
+    var name = $("#name-user").val();
+
+    // If the name is empty
+    if (!name) {
+        alert("Please type your name");
+    } else {
+        localStorage.setItem("name", name);
+        greet_user();
+    }
+    $("#name-user").val("");
+});
+
+$("#not-me").click(function() {
+    localStorage.removeItem("name");
+    $("#welcome-area").hide();
+    $("#name-field").show();
+});
+
+function greet_user() {
+    $("#name-field").hide();
+
+    $("#welcome-text").text("Hi " + localStorage.name + ", how are you?");
+    $("#not-me").text("Not " + localStorage.name + "?");
+    
+    $("#welcome-area").show();
+}
+
+// If it exists
+if (localStorage.name) {
+    greet_user();
+} */
+
 // *********
 // Lesson 45
 // *********
