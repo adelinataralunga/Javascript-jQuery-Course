@@ -818,11 +818,49 @@ if (localStorage.name) {
 } */
 
 // *********
-// Lesson 45
-// *********
-// *********
-// Lesson 46
-// *********
-// *********
 // Lesson 47
 // *********
+/* var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var responseObject = JSON.parse(this.responseText);
+
+        var question = responseObject.results[0].question;
+        var answers = responseObject.results[0].incorrect_answers;
+        answers.push(responseObject.results[0].correct_answer);
+
+        console.log("The question is", question);
+        console.log("The answers are", answers);
+    }
+};
+
+xhttp.open("GET", "https://opentdb.com/api.php?amount=1");
+xhttp.send(); */
+
+// *********
+// Lesson 48
+// *********
+$.ajax({
+    url: "https://opentdb.com/api.php?amount=1",
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+        present_question(data);
+    },
+    error: function() {
+        console.log('Error in the request');
+    }
+})/* .done(function(data) {
+    present_question(data);
+}).fail(function() {
+    console.log('Error in the request');
+}) */;
+
+function present_question(data) {
+    var question = data.results[0].question;
+    var answers = data.results[0].incorrect_answers;
+    answers.push(data.results[0].correct_answer);
+
+    console.log("The question is", question);
+    console.log("The answers are", answers);
+}
