@@ -840,7 +840,7 @@ xhttp.send(); */
 // *********
 // Lesson 48
 // *********
-$.ajax({
+/* $.ajax({
     url: "https://opentdb.com/api.php?amount=1",
     type: "GET",
     dataType: "json",
@@ -850,17 +850,17 @@ $.ajax({
     error: function() {
         console.log('Error in the request');
     }
-})/* .done(function(data) {
+}) *//* .done(function(data) {
     present_question(data);
 }).fail(function() {
     console.log('Error in the request');
 }) */;
 
-function present_question(data) {
+/* function present_question(data) {
     var question = data.results[0].question;
     var answers = data.results[0].incorrect_answers;
     answers.push(data.results[0].correct_answer);
 
     console.log("The question is", question);
     console.log("The answers are", answers);
-}
+} */
